@@ -1,0 +1,125 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat_coord
+  longitude: !secret long_coord
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 109
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  # customize entities
+  customize: !include_dir_merge_named customize
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+#zwave:
+  #usb_path: /dev/ttyACM0
+  #config_path: /srv/homeassistant/src/python-openzwave/openzwave/config/
+
+mqtt:
+  broker: localhost
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+media_player:
+  - platform: roku
+
+# Ecobee
+ecobee:
+  api_key: !secret ecobee_api_key
+  hold_temp: true
+
+ffmpeg:
+
+# Arlo
+arlo:
+  username: !secret arlo_email
+  password: !secret arlo_password
+
+ring:
+  username: !secret ring_email
+  password: !secret ring_password
+
+device_tracker:
+  #- platform: ddwrt
+  #  host: !secret ddwrt_host
+  #  username: !secret ddwrt_user
+  #  password: !secret ddwrt_password
+  #
+  - platform: owntracks
+
+lock:
+  - platform: mqtt
+    name: Back Garage Door 
+    state_topic: "smartthings/Back Garage Door/lock"
+    command_topic: "smartthings/Back Garage Door/lock"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
+    optimistic: false
+    qos: 1
+    retain: true
+    value_template: '{{ value.x }}'
+
+# Text to speech
+tts:
+  platform: google
+
+zone:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 100
+  icon: mdi:home
+
+zone 2:
+  name: !secret work_name
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 200
+  icon: mdi:city
+
+alert: !include alert.yaml
+automation: !include automations.yaml
+camera: !include devices/cameras.yaml
+binary_sensor: !include devices/binary_sensors.yaml
+sensor: !include_dir_merge_list sensor
+light: !include devices/lights.yaml
+group: !include_dir_merge_named groups_views
+switch: !include switch.yaml
+envisalink: !include devices/envisalink.yaml
+

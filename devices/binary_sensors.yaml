@@ -1,0 +1,18 @@
+# binary sensors
+  - platform: mqtt
+    state_topic: "smartthings/Water Leak Sensor/water"
+    name: "Washing Machine"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    device_class: moisture
+    value_template: '{{ value.x }}'
+
+  - platform: mqtt
+    state_topic: "smartthings/Refrigerator/water,"
+    name: "Refrigerator"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    device_class: moisture
+    value_template: '{{ value.x }}'

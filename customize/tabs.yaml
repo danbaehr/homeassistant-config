@@ -1,0 +1,15 @@
+###########################################
+# View/Tab Order
+###########################################
+group.default_view:
+  order: "1"
+group.roomba:
+  order: "2"
+group.weather_forecast:
+  order: "3"
+group.statistics:
+  order: "4"
+group.alarm_view:
+  order: "5"
+group.other:
+  order: "6"

@@ -1,0 +1,32 @@
+    device_tracker.dan_nexus_6p:
+      entity_picture: /local/dan.jpg
+    device_tracker.dan_arieliphone:
+      entity_picture: /local/ariel.jpg
+    binary_sensor.upstairs_occupancy:
+      friendly_name: Upstairs
+      icon: mdi:account-multiple
+    binary_sensor.downstairs_occupancy:
+      friendly_name: Downstairs
+      icon: mdi:account-multiple
+    sensor.ring_front_door_volume:
+      icon: mdi:volume-high
+    media_player.chromagnon:
+      icon: mdi:google-chrome
+    climate.downstairs:
+      icon: mdi:temperature-fahrenheit
+    climate.upstairs:
+      icon: mdi:temperature-fahrenheit
+    sensor.downstairs_humidity:
+      icon: mdi:water
+    sensor.upstairs_humidity:
+      icon: mdi:water
+    sensor.ring_front_door_battery:
+      icon: mdi:battery
+    sensor.energy_meter:
+      icon: mdi:flash
+    switch.back_garage_door_lock:
+      icon: mdi:lock-open
+    switch.garage_door:
+      icon: mdi:garage
+    sensor.ring_front_door_last_ding:
+      icon: mdi:bell-ring

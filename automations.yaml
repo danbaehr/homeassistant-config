@@ -1,0 +1,30 @@
+- action:
+  - data:
+      entity_id: switch.roomba
+    service: switch.turn_off
+  - data:
+      data:
+        sound: cosmic
+      message: Cleaning stopped.
+      title: Roomba
+    service: notify.pushover
+  alias: Robots - Roomba - Stop
+  #id: '1495333490008'
+  trigger:
+  - entity_id: group.all_devices
+    from: not_home
+    platform: state
+    to: home
+
+- action:
+  - data:
+      data:
+        sound: cosmic
+      message: Firmware {{trigger.from_state}} upgraded to version {{trigger.to_state}}
+      title: Roomba
+    service: notify.pushover
+  alias: System - Roomba - Firmware Update
+  #id: '1495808493058'
+  trigger:
+  - entity_id: sensor.roomba_firmware
+    platform: state

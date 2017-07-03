@@ -1,0 +1,27 @@
+- platform: command_line
+  switches:
+    roomba:
+      command_on: "curl -s http://localhost:3000/api/local/action/start"
+      command_off: "curl -s http://localhost:3000/api/local/action/stop"
+      command_state: "curl -s http://localhost:3000/api/local/info/mission | jq .cleanMissionStatus.cycle | sed -e 's/^\"//' -e 's/\"$//'"
+      value_template: '{{ value == "quick" }}'
+      
+- platform: mqtt
+  name: "Back Garage Door"
+  state_topic: "smartthings/Back Garage Door/lock"
+  command_topic: "smartthings/Back Garage Door/lock"
+  payload_on: "locked"
+  payload_off: "unlocked"
+  optimistic: false
+  qos: 1
+  retain: true
+
+- platform: mqtt
+  name: "Garage Door"
+  state_topic: "smartthings/Garage Door/door"
+  command_topic: "smartthings/Garage Door/door"
+  payload_on: "open"
+  payload_off: "closed"
+  optimistic: false
+  qos: 1
+  retain: true

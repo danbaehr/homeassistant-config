@@ -1,0 +1,14 @@
+# DEFAULT VIEW
+default_view:
+  view: yes
+  icon: mdi:home-assistant
+  entities:
+    - group.date_time        
+    - group.indoor_climate
+    - group.lights
+    - group.cameras
+    - group.weather_today
+    - group.weather_forecast
+    - device_tracker.dan_nexus_6p
+    - device_tracker.dan_arieliphone
+

@@ -1,0 +1,7 @@
+weather_forecast:
+  name: Weather
+  view: yes
+  icon: mdi:weather-partlycloudy
+  entities:
+    - group.weather_three_day
+    - group.weather_today

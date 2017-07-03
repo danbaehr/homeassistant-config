@@ -1,0 +1,16 @@
+# OTHER #
+other:
+  name: Other
+  view: yes
+  icon: mdi:help
+  entities:
+    - media_player.chromagnon
+    - media_player.myroku
+    - group.ring_doorbell
+    - group.room_occupancy
+    - group.energy_usage
+    - group.leak_sensors
+    - group.garage
+    - camera.dan
+
+

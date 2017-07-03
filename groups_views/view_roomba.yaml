@@ -1,0 +1,10 @@
+# ROOMBA #
+roomba_view:
+  name: Roomba
+  view: yes
+  icon: mdi:robot
+  entities:
+    - alert.roomba_bin_full
+    - group.roomba
+    - group.roomba_automation
+    - group.roomba_system

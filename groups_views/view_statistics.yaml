@@ -1,0 +1,8 @@
+# STATISTICS #
+statistics:
+  name: Stats
+  view: yes
+  icon: mdi:chart-areaspline
+  entities:
+    - group.internet
+    - group.alarm

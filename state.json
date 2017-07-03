@@ -1,0 +1,41 @@
+{
+    "subscriptions": [
+        "smartthings/Garage Door/door",
+        "smartthings/Garage Door/door",
+        "smartthings/Aeon Home Energy Meter/power",
+        "smartthings/Harmony Hub/activities",
+        "smartthings/Arlo/rssi",
+        "smartthings/Arlo/motion",
+        "smartthings/Downstairs sensor/motion",
+        "smartthings/Upstairs sensor/motion",
+        "smartthings/Front Door/motion",
+        "smartthings/Harmony Hub/currentActivity",
+        "smartthings/Arlo/switch",
+        "smartthings/Garage Door/contact",
+        "smartthings/Contacts/notify",
+        "smartthings/System/notify",
+        "smartthings/Arlo/battery",
+        "smartthings/Back Garage Door/battery",
+        "smartthings/Garden House Door/battery",
+        "smartthings/Refrigerator/battery",
+        "smartthings/Water Leak Sensor/battery",
+        "smartthings/Refrigerator/water",
+        "smartthings/Water Leak Sensor/water",
+        "smartthings/Arlo/lqi",
+        "smartthings/Back Garage Door/lock",
+        "smartthings/Garden House Door/lock",
+        "smartthings/Aeon Home Energy Meter/energy"
+    ],
+    "callback": "192.168.10.50:39500",
+    "history": {
+        "smartthings/Garage Door/door": "open",
+        "smartthings/Aeon Home Energy Meter/power": "900",
+        "smartthings/Downstairs sensor/motion": "active",
+        "smartthings/Upstairs sensor/motion": "inactive",
+        "smartthings/Front Door/motion": "inactive",
+        "smartthings/Garage Door/contact": "open",
+        "smartthings/Back Garage Door/battery": "85",
+        "smartthings/Back Garage Door/lock": "locked"
+    },
+    "version": "1.3.4"
+}

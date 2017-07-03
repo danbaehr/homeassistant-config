@@ -1,0 +1,76 @@
+  - platform: wunderground
+    api_key: !secret wunderground_api_key
+    monitored_conditions:
+      - alerts
+      - feelslike_f
+      - precip_today_in
+      - pressure_in
+      - relative_humidity
+      - temp_f
+      - weather
+      - wind_mph
+      - weather_1d_metric
+      - weather_2d_metric
+      - weather_3d_metric
+      - weather_4d_metric
+
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+
+  - platform: ring
+    monitored_conditions:
+      - battery
+      - last_activity
+      - last_ding
+      - last_motion
+      - volume
+
+  - platform: mqtt
+    state_topic: "smartthings/Aeon Home Energy Meter/power"
+    name: "Energy Meter"
+    unit_of_measurement: "watts"
+
+  - platform: statistics
+    entity_id: sensor.energy_meter
+    name: Energy Meter Stats
+
+  - platform: mqtt
+    state_topic: "smartthings/Back Garage Door/battery"
+    name: "Back Garage Door Battery"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    state_topic: "smartthings/Back Garage Door/lock"
+    name: "Back Garage Door"
+
+  - platform: mqtt
+    state_topic: "smartthings/Arlo/battery"
+    name: "Arlo"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    state_topic: "smartthings/Garden House Door/battery"
+    name: "Cottage Door"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    state_topic: "smartthings/Garage Door/contact"
+    name: "Garage Door"
+
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+  - platform: statistics
+    entity_id: sensor.speedtest_download
+    name: Download Speed Stats
+
+  - platform: statistics
+    entity_id: sensor.speedtest_upload
+    name: Upload Speed Stats
+

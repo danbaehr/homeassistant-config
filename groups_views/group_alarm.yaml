@@ -1,0 +1,49 @@
+alarm_control:
+  name: "Alarm Control"
+  entities:
+    - sensor.home_alarm_keypad
+    - alarm_control_panel.home_alarm
+
+alarm_front_garage:
+    name: "Front Door / Garage"
+    entities:
+      - binary_sensor.front_door
+      - binary_sensor.rear_garage_door
+
+alarm_family_room:
+    name: "Family Room"
+    entities:
+      - binary_sensor.side_living_room_windows
+      - binary_sensor.front_living_room_windows
+      - binary_sensor.patio_door
+
+alarm_kitchen:
+    name: "Kitchen"
+    entities:
+      - binary_sensor.kitchen_entry_door
+      - binary_sensor.kitchen_window
+      - binary_sensor.kitchen_bay_windows
+
+alarm_dining_room:
+    name: "Dining Room"
+    entities:
+      - binary_sensor.dining_room_windows
+
+alarm_sensors:
+    name: "Sensors"
+    entities:
+      - binary_sensor.glass_break_sensor
+      - binary_sensor.unknown_g
+
+alarm_upstairs_crawlspace:
+    name: "Upstairs / Crawlspace"
+    entities:
+      - binary_sensor.upstairs_windows
+
+alarm_unknowns:
+    name: "Unknown"
+    entities:
+      - binary_sensor.unknown_f
+      - binary_sensor.unknown_b
+      - binary_sensor.unknown_c
+      - binary_sensor.unknown_e

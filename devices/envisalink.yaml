@@ -1,0 +1,60 @@
+  host: !secret envisalink_host
+  panel_type: HONEYWELL
+  user_name: !secret envisalink_user
+  password: !secret envisalink_password
+  code: !secret envisalink_code
+  evl_version: 4
+  keepalive_interval: 60
+  zonedump_interval: 30
+  zones:
+    1:
+      name: 'Front Door'
+      type: 'opening'
+    2:
+      name: 'Rear Garage Door'
+      type: 'opening'
+    3:
+      name: 'Front Living Room Windows'
+      type: 'opening'
+    4:
+      name: 'Kitchen Entry Door'
+      type: 'opening'
+    5:
+      name: 'Patio Door'
+      type: 'opening'
+    6:
+      name: 'Glass Break Sensor'
+      type: 'vibration'
+    7:
+      name: 'Kitchen Window'
+      type: 'opening'
+    8:
+      name: 'Unknown B'
+      type: 'opening'
+    9:
+      name: 'Unknown C'
+      type: 'opening'
+    10:
+      name: 'Dining Room Windows'
+      type: 'opening'
+    11:
+      name: 'Upstairs Windows'
+      type: 'opening'
+    12:
+      name: 'Side Living Room Windows'
+      type: 'opening'
+    13:
+      name: 'Kitchen Bay Windows'
+      type: 'opening'
+    14:
+      name: 'Unknown E'
+      type: 'opening'
+    15:
+      name: 'Unknown F'
+      type: 'opening'
+    16:
+      name: 'Unknown G'
+      type: 'vibration'
+  partitions:
+    01:
+      name: 'Home Alarm'

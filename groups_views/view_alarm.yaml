@@ -1,0 +1,14 @@
+# OTHER #
+alarm_view:
+  name: Alarm System
+  view: yes
+  icon: mdi:security-home
+  entities:
+    - group.alarm_control
+    - group.alarm_front_garage
+    - group.alarm_family_room
+    - group.alarm_kitchen
+    - group.alarm_dining_room
+    - group.alarm_sensors
+    - group.alarm_upstairs_crawlspace
+    - group.alarm_unknowns

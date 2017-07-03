@@ -1,0 +1,6 @@
+Roomba_System:
+  name: "Roomba 960"
+  entities:
+    - sensor.roomba_firmware
+    - sensor.roomba_battery_template
+    - sensor.roomba_rssi
